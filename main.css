@@ -1,0 +1,14 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f3f0f0;
+}
+.navbar {
+    background-color: #262933;
+    color: #f3f0f0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.nav-link {
+    cursor: pointer;
+    color: #f3f0f0;
+}
