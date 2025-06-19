@@ -1,7 +1,9 @@
 body {
-    padding: 0;
-    margin: 0;
     background: #f3f0f0;
+}
+.container {
+    padding-left: 60px;
+    padding-right: 60px;
 }
 .navbar {
     background-color: #262933;
