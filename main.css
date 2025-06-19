@@ -12,3 +12,6 @@ body {
     cursor: pointer;
     color: #f3f0f0;
 }
+.center {
+  text-align: center;
+}
