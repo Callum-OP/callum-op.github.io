@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Callum-OP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link for bootstrap css and my own css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Callum-OP">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/callum-o-prey/">LinkedIn</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <br><br>
+        <h1 class="center">Review Sentiment Classifier</h1>
+        <h5 class="center">Feb 2024 - May 2024 - Academic Project</h5>
+        <p class="center">GitHub Repo: <a href="https://github.com/Callum-OP/Review-Sentiment-Classifier">https://github.com/Callum-OP/Review-Sentiment-Classifier</a></p>
+        <a href="sentiment-classifier.html"><img class="img-title rounded img-fluid" src="images/sentiment-classifier/prediction.png" alt="Sentiment classifier predictions screenshot" /></a><br><br>
+        <p>University Assignment: Learning models capable of conducting sentiment classification. Decided to use Amazon product 
+            reviews as a data source. Multinomial Naive Bayes (MNB) classifier and Multilayer Perceptron (MLP) deep neural network 
+            were chosen as the models to compare, both trained to sort reviews into positive, negative and neutral categories. 
+            Compared both models, using f1 scores I could see MLP was more accurate at predicting sentiment compared to MNB classifier but 
+            took far longer to train. While the project went well I could have also used TensorFlow models or another neural network to make it more interesting.</p>
+        <p>The MLP neural network that I used had 83% accuracy, the f1 scores for each sentiment are as follows; 0.93 for positive reviews, 0.82 for negative reviews and 
+            0.36 for neutral reviews. The f1 scores seem to match the amount of data stored as positive had the most review data and neutral had the least, if I had an even amount 
+            of training data for each sentiment the accuracy would likely be more consistent and accurate. 
+        </p>
+
+            Features:
+            <ul>
+                <li>View predicted sentiment of reviews.</li>
+                <li>View tables showing accuracy of each model.</li>
+            </ul>
+        <br>
+        <p>Screenshots of the f1 scores tables (MNB on left and MLP on right) and the amount of samples (support):</p>
+        <div class="row">
+            <a class="col" href="images/sentiment-classifier/mnb-f1scores.png"><img class="img rounded img-fluid" src="images/sentiment-classifier/mnb-f1scores.png" alt="MNB sentiment classifier f1 scores screenshot"/></a><br>
+            <a class="col" href="images/sentiment-classifier/mlp-f1scores.png"><img class="img rounded img-fluid" src="images/sentiment-classifier/mlp-f1scores.png" alt="MLP sentiment classifier f1 scores screenshot"/></a><br><br>
+        </div>
+        <br>
+    </div>
+</body>

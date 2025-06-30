@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Callum-OP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link for bootstrap css and my own css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Callum-OP">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/callum-o-prey/">LinkedIn</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <br><br>
+        <h1 class="center">Voice Controlled Light</h1>        
+        <h5 class="center">Feb 2024 - May 2024 - Academic Project</h5>
+        <p class="center">GitHub Repo: <a href="https://github.com/Callum-OP/Voice-Controlled-Light">https://github.com/Callum-OP/Voice-Controlled-Light</a></p>
+        <a href="images/voice-control/data.png"><img class="img-title rounded img-fluid" src="images/voice-control/data.png" alt="Screenshot of the data explorer of the voice control model on Edge Impulse"/></a><br><br>
+        <p>University Assignment: A C++ machine learning model for controlling lights through voice commands using a Arduino Nano 
+            33 BLE Sense and Edge Impulse to train and compile the model. Trained model on audio collected manually through the Arduino mic. 
+            Downloaded model on to Arduino, modified Arduino code so that it would light up different LEDs depending on which words were detected, 
+            tested model and it worked well.</p>
+        <p>The system had originally been very accurate but the more phrases I added that were similar such as; Bedroom Light vs Livingroom Light, 
+            then the more likely the model will mix the words up. I may have made this more complicated by using multiple command phrases and could 
+            be better off with more unique command words. Either way the model had 70% accuracy when tested live despite a low number of audio samples.</p>
+
+            Features:
+            <ul>
+                <li>Activate different lights on Arduino based on commands.</li>
+                <li>Turn off specific lights on Arduino using command phrases.</li>
+                <li>View predicted command and predicted accuracy on Arduino IDE.</li>
+            </ul>
+        <br>
+        <p>Screenshots of Edge Impulse and arduino IDE:</p>
+        <div class="row">
+            <a class="col" href="images/voice-control/impulse.png"><img class="img rounded img-fluid" src="images/voice-control/impulse.png" alt="Screenshot of the impulse settings of the voice control model on Edge Impulse"/></a><br>
+            <a class="col" href="images/voice-control/IDE.png"><img class="img rounded img-fluid" src="images/voice-control/IDE.png" alt="Screenshot of the voice control model on arduino IDE"/></a><br><br>
+        </div>
+        <br>
+        <div class="row">
+            <a class="col" href="images/voice-control/features.png"><img class="img rounded img-fluid" src="images/voice-control/features.png" alt="Screenshot of the feature explorer of the voice control model on Edge Impulse"/></a><br>
+            <a class="col" href="images/voice-control/training.png"><img class="img rounded img-fluid" src="images/voice-control/training.png" alt="Screenshot of the training performance of the voice control model on Edge Impulse"/></a><br><br>
+        </div>
+        <br>
+    </div>
+</body>

@@ -1,0 +1,10 @@
+.img-title {
+    max-width: 75%;
+    display: block;
+    margin: auto;
+}
+.img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
