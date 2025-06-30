@@ -7,19 +7,20 @@
     <!-- Link for bootstrap css and my own css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.html">Portfolio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="cv.html">CV</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -33,32 +34,36 @@
     </nav>
 
     <!-- Content -->
-    <div class="container">
+    <div class="container">	
         <br><br>
-        <h1 class = "center">About Me</h1>
-        <p class = "center"><b>Address:</b> Crossgar, County Down, BT30 9DA <b>Mobile:</b> 07856549341 <b>Email:</b> callumoprey@gmail.com</p>
+        <h1 class = "center">My Portfolio</h1>
         <br>
-            <h3>Who I am</h3>
-            <p>Hello! I'm <b>Callum O'Prey</b>, a Computer Science graduate from Ulster University in Belfast, Northern Ireland. 
-                I studied from 2020 to 2024, achieving First-Class Honours and earning recognition with the Dean’s List Award 
-                and Ulster Edge Excel Award.</p>
-
-            <p>During my third year at university, I completed a year-long placement as a 2nd Line Support Analyst with the 
-                Northern Ireland Civil Service. I tackled computer incidents and communicated with colleagues 
-                via Microsoft Teams. My time there helped sharpen my problem-solving skills.</p>
-
-            <h3>My interests</h3>
-            <p>I have a passion for computing and a deep love for creating, naturally I grew to enjoy programming 
-                as it allowed me to make whatever I desired. This includes but is not limited to games, websites, 
-                full stack apps and learning models</p>
-
-            <p>Beyond coding, I enjoy drawing, more recently digital drawing of landscapes, objects or characters. 
-                I also enjoy playing a wide variety of games, if I'm not coding, drawing or playing games then I will
-                probably be playing piano</p>
-            
-            <h3>Find out more</h3>
-            <p>If you’d like to know more about my education and experience feel free to check out my 
-                <a href="cv.html">CV</a>, or if you are more interested in my projects then check out my <a href="projects.html">Portfolio</a></p>
-            <br>
+        <div class="masonry-container">
+            <div class="masonry-item">
+                <a href="art-share.html"><img class="rounded img-fluid" src="images/art-share/home.png" alt="Art share site screenshot" /></a><br>
+                <h3>Art Share Site</h3>
+                <p>A social media site designed for sharing art or animation files, 
+                    uses Django for backend and Angular for frontend. Developed in my own time after learning Django.</p>
+                <br>
+            </div>
+            <div class="masonry-item">
+                <a href="images/comic-collections/home.png"><img class="rounded img-fluid" src="images/comic-collections/home.png" alt="Comic collections site screenshot" /></a>
+            </div>
+            <div class="masonry-item">
+                <a href="images/home-inventory/home.png"><img class="rounded img-fluid" src="images/home-inventory/home.png" alt="Home inventory site screenshot" /></a>
+            </div>
+            <div class="masonry-item">
+                <a href="images/inventory-system/home.png"><img class="rounded img-fluid" src="images/inventory-system/home.png" alt="Comment bank site screenshot" /></a>
+            </div>
+            <div class="masonry-item">
+                <a href="images/comment-bank/home.png"><img class="rounded img-fluid" src="images/comment-bank/home.png" alt="Comment bank site screenshot" /></a>
+            </div>
+            <div class="masonry-item">
+                <a href="images/forest-game/title.png"><img class="rounded img-fluid" src="images/forest-game/title.png" alt="Forest game screenshot" /></a>
+            </div>
+            <div class="masonry-item">
+                <a href="images/pirate-game/title.png"><img class="rounded img-fluid" src="images/pirate-game/title.png" alt="Pirate game screenshot" /></a>
+            </div>
+        </div>
     </div>
 </body>
