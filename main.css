@@ -1,19 +1,25 @@
 body {
     background: #f3f0f0;
+    /*background: #262933;*/
+    /*color: #f3f0f0;*/
 }
+
 .container {
     padding-left: 60px;
     padding-right: 60px;
 }
+
 .navbar {
     background-color: #262933;
     color: #f3f0f0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
+
 .nav-link {
     cursor: pointer;
     color: #f3f0f0;
 }
+
 .center {
   text-align: center;
 }
