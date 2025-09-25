@@ -1,56 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Callum-OP</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link for bootstrap css, my own css and awesome font css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callum O'Prey | Portfolio</title>
+    <!-- Links to bootstrap css, devicon css, awesome font css and my own css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/projects.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
 
-    <!-- Content -->
-    <div class="container">
-        <br><br>
-        <h1 class = "center">Callum O'Prey</h1>
-        <p class = "center"><i class="fas fa-map-marker-alt"></i><b> Address:</b> Crossgar, County Down, BT30 9DA &emsp; <i class="fas fa-phone"></i><b> Mobile:</b> 07856549341 &emsp; <i class="fas fa-envelope"></i><b> Email:</b> <a href="mailto:you@example.com">callumoprey@gmail.com</a></p>
-        <br>
-        <h3>Who I am</h3>
-        <p>Hello! I'm <b>Callum O'Prey</b>, a Computer Science graduate from Ulster University in Belfast, Northern Ireland. 
-            I studied from 2020 to 2024, achieving First-Class Honours and earning recognition with the Dean’s List Award 
-            and Ulster Edge Excel Award.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+    <h1>Hi, I'm Callum O'Prey</h1>
+    <p>Computer Science Graduate | Independent Developer</p>
+    <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+    </section>
 
-        <p>During my third year at university, I completed a year-long placement as a 2nd Line Support Analyst with the 
-            Northern Ireland Civil Service. I tackled computer incidents and communicated with colleagues 
-            via Microsoft Teams. My time there helped sharpen my problem-solving skills.</p>
-        <br>
-        <h3>My interests</h3>
-        <p> I have a passion for computing, and I naturally grew to enjoy programming because 
-            it allowed me to create whatever I imagined from games and websites to full-stack applications. 
-            It isn't just a passion for computing but also a love for creating. Long before I understood how 
-            to write code, I was building games and interactive stories using tools like 
-            Scratch and GameMaker.</p>
+    <!-- Projects -->
+    <section id="projects" class="container py-5">
+    <h2 class="text-center mb-5">Featured Projects</h2>
+    <div class="row">
+        <div class="row">
+            <!-- Piano Teacher -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/piano-teacher.html">
+                        <img src="/images/piano-teacher/prototype.png" alt="Piano Teacher screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Piano Teacher</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <p>Building an app that teaches users how to play piano.</p>
+                    </div>
+                </div>
+            </div>
 
-        <p>I enjoy using several programming languages, C# was one of the first languages I learned, 
-            and I still enjoy using it today, mainly for creating scripts for games in Unity. I don't really have a single favourite programming language as different 
-            languages are useful for different applications however the languages that I have used the most would likely be Python and TypeScript/JavaScript 
-            as they have a wide range of uses.</p>
+            <!-- NPC Chatbot -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/npc-chatbot.html">
+                        <img src="/images/npc-chatbot/NPCThumbnail.png" alt="NPC Chatbot screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>NPC Chatbot</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-flask-original colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        </div>
+                        <p>Advanced NPC dialogue system using Flask, Python, and C++ SFML.</p>
+                    </div>
+                </div>
+            </div>
 
-        <p>Beyond coding, I enjoy drawing, more recently digital drawing and animation of landscapes, objects or characters. 
-            I also enjoy playing a wide variety of games, if I am not doing any of that then I am likely playing piano.</p>
-        <br>
-        <h3>My projects</h3>
-        <p>Take a look at some of my <a href="/projects.html">projects</a>, they include full stack apps, websites, learning models and games.</p>
-        <br>
-        <h3>Find out more</h3>
-        <p>You can take a look at my <a href="/cv.html">CV</a> if you want a more detailed view of my education, skills and experience.</p>
-        <br>
+            <!-- Path Finder -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/path-finder.html">
+                        <img src="/images/path-finder/PathFinder.png" alt="Path Finder screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Path Finder</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <i class="devicon-cmake-plain colored"></i>
+                        </div>
+                        <p>A C++ SFML pathfinding tool implementing the A* algorithm for AI and route planning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texture Packer -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/texture-packer.html">
+                        <img src="/images/texture-packer/TexturePackerThumbnailSmall.png" alt="Texture Packer screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Texture Packer</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <p>A tool to create a sprite or atlas sheets using uploaded images.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Shrinker -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/image-shrinker.html">
+                        <img src="/images/image-shrinker/IS-Small.png" alt="Image Shrinker screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Image Shrinker</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <p>A JavaScript website for shrinking one or more images by a chosen percentage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Share -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/art-share.html">
+                        <img src="/images/art-share/home.png" alt="Art Share screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Art Share</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-django-plain colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-angularjs-plain colored"></i>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <i class="devicon-docker-plain colored"></i>
+                        </div>
+                        <p>A social media site for sharing art and animation files, built with Django and Angular.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anti Aliaser -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/anti-aliaser.html">
+                        <img src="/images/anti-aliaser/AALineThumbnail.png" alt="Anti Aliaser screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Anti Aliaser</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <p>A tool that thins and fades line drawings to simulate anti-aliasing effects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CBT Therapy Site -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/cbt-therapy.html">
+                        <img src="/images/cbt-therapy/CBT-Therapy.png" alt="CBT Therapy Site screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>CBT Therapy Site</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-wordpress-plain colored"></i>
+                        </div>
+                        <p>A website for advertising the services of a therapist who specialises in Cognitive Behavioural Therapy (CBT).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Inventory -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/home-inventory.html">
+                        <img src="/images/home-inventory/home.png" alt="Home Inventory screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Home Inventory</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-flask-original colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-angularjs-plain colored"></i>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-mongodb-plain colored"></i>
+                        </div>
+                        <p>A full-stack home inventory app to store the details of houses and household items.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sentiment Classifier -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/sentiment-classifier.html">
+                        <img src="/images/sentiment-classifier/prediction.png" alt="Sentiment Classifier screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Sentiment Classifier</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-scikitlearn-plain colored"></i>
+                        </div>
+                        <p>Compared ML models for sentiment classification using Amazon product reviews.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Controlled Light -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/voice-control.html">
+                        <img src="/images/voice-control/data.png" alt="Voice Controlled Light screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Voice Controlled Light</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        </div>
+                        <p>A machine learning model for controlling lights through voice commands.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comic Collections -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/comic-collections.html">
+                        <img src="/images/comic-collections/home.png" alt="Comic Collections screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Comic Collections</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-flask-original colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-angularjs-plain colored"></i>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-mongodb-plain colored"></i>
+                        </div>
+                        <p>A full-stack comic book app with Marvel dataset integration and Auth0 authentication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Azure Media Site -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/azure-media.html">
+                        <img src="/images/azure-media/posts.png" alt="Azure Media Site screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Azure Media Site</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-cosmosdb-plain colored"></i>
+                        </div>
+                        <p>A media sharing web app hosted on Azure for storing a variety of media files and data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forest Game -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/forest-game.html">
+                        <img src="/images/forest-game/title.png" alt="Forest Game screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Forest Game</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-unity-plain"></i>
+                        <i class="devicon-csharp-plain colored"></i>
+                        </div>
+                        <p>A 2D topdown zelda style adventure game built in Unity with a wide range of UI, combat and enemy features.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory System -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/inventory-system.html">
+                        <img src="/images/inventory-system/home.png" alt="Inventory System screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Inventory System</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-php-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                        <i class="devicon-docker-plain colored"></i>
+                        </div>
+                        <p>Laravel/PHP inventory management system with stock tracking and reporting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment Bank -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/comment-bank.html">
+                        <img src="/images/comment-bank/home.png" alt="Comment Bank screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Comment Bank</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-php-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                        <i class="devicon-docker-plain colored"></i>
+                        </div>
+                        <p>A comment bank that stored markers comments, used by education staff to give feedback.</p>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Elevens Game -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/elevens-game.html">
+                        <img src="/images/elevens-game/start.png" alt="Elevens Game screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Elevens Game</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-java-plain colored"></i>
+                        </div>
+                        <p>A Java-based card game where players match cards to total 11 or form royal sets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Treasure In Paradise -->
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <a href="/projects/pirate-game.html">
+                        <img src="/images/pirate-game/title.png" alt="Treasure In Paradise screenshot">
+                    </a>
+                    <div class="p-3">
+                        <h4>Treasure In Paradise</h4>
+                        <div class="tech-icons">
+                        <i class="devicon-unity-plain colored"></i>
+                        <i class="devicon-csharp-plain colored"></i>
+                        </div>
+                        <p>A 2D fantasy pirate game built in Unity using a RAD methodology.</p>
+                    </div>
+                </div>
+            </div>
     </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container py-5 text-center">
+    <h2>Get In Touch</h2>
+    <p>Email: <a href="mailto:callumoprey@gmail.com">callumoprey@gmail.com</a></p>
+    </section>
+
+    <footer>
+    <p>© 2025 Callum O'Prey</p>
+    </footer>
 
     <!-- Javascript files -->
     <script src="/main.js" defer></script>
 </body>
+</html>

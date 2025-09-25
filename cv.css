@@ -1,3 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    scroll-behavior: smooth;
+}
+
 .modules {
     padding: 0px;
     margin: 0px;
