@@ -2,11 +2,34 @@
     background: linear-gradient(135deg, #0d1117, #161b22);
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .nav-link {
     cursor: pointer;
     color: #f3f0f0;
+}
+
+#navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+#navMenu ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu a {
+    text-decoration: none;
 }
 
 .center {
