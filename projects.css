@@ -6,20 +6,21 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    min-height: calc(100vh - 60px);
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     text-align: center;
+    padding: 2rem 1.5rem;
     background: linear-gradient(135deg, #0d1117, #161b22);
 }
 
 .hero h1 {
-    font-size: 4rem; font-weight: 700;
+    font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 700;
     animation: fadeInDown 1s ease;
 }
 
 .hero p {
-    font-size: 1.3rem; color: #8b949e;
+    font-size: clamp(1rem, 3.5vw, 1.3rem); color: #8b949e;
     animation: fadeInUp 1.5s ease;
 }
 
