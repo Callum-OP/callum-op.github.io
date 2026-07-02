@@ -24,6 +24,43 @@ body {
     animation: fadeInUp 1.5s ease;
 }
 
+.project-group {
+    margin-bottom: 3.5rem;
+}
+
+.category-heading {
+    font-weight: 600;
+    border-bottom: 1px solid #21262d;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-heading i {
+    color: #58a6ff;
+}
+
+.category-desc {
+    color: #8b949e;
+    margin-bottom: 1.75rem;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 0.65rem;
+    border: 1px solid transparent;
+}
+
+.tag-fullstack { color: #7ee787; background: rgba(63, 185, 80, 0.15);  border-color: rgba(63, 185, 80, 0.4); }
+.tag-frontend  { color: #79c0ff; background: rgba(56, 139, 253, 0.15); border-color: rgba(56, 139, 253, 0.4); }
+.tag-game      { color: #d2a8ff; background: rgba(163, 113, 247, 0.15); border-color: rgba(163, 113, 247, 0.4); }
+.tag-ml        { color: #ffa657; background: rgba(219, 109, 40, 0.15);  border-color: rgba(219, 109, 40, 0.4); }
+.tag-tool      { color: #f0d267; background: rgba(210, 153, 34, 0.15);  border-color: rgba(210, 153, 34, 0.4); }
+
 .project-card {
     background: #161b22;
     border-radius: 12px;
