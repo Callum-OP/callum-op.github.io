@@ -594,3 +594,78 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 [data-theme="sunset"] .fog {
     background: linear-gradient(to bottom, transparent, rgba(20, 11, 18, 0.55) 55%, var(--bg) 100%);
 }
+
+/* =========================================================
+   Day theme (light)
+   ========================================================= */
+[data-theme="day"] {
+    --bg: #eef2f8;
+    --bg-soft: #e4eaf3;
+    --panel: #ffffff;
+    --panel-2: #f1f5fa;
+    --border: #d6deea;
+    --text: #1b2430;
+    --muted: #5b6675;
+    --accent1: #4f46e5;
+    --accent2: #6a30d4;
+    --accent3: #5b2bc7;
+    --grad: linear-gradient(120deg, #4338ca 0%, #6a30d4 50%, #7c3aed 100%);
+}
+
+/* Bright daytime sky */
+[data-theme="day"] .hero {
+    background: linear-gradient(to bottom, #4a90e2 0%, #74b0ec 40%, #a3ccef 72%, #c4dcef 100%);
+}
+
+/* Blue-violet title gradient that reads on the light sky */
+[data-theme="day"] .hero-title {
+    background-image: linear-gradient(120deg, #4338ca 0%, #4b30d4 50%, #673aed 100%);
+    color: #241a4d;
+}
+
+/* Daytime: no stars, bright sun, white clouds, green hills */
+[data-theme="day"] .stars { display: none; }
+[data-theme="day"] ::selection { background: rgba(37, 99, 235, 0.25); }
+
+[data-theme="day"] .moon {
+    top: 16%; right: 18%;
+    width: 104px; height: 104px;
+    background: radial-gradient(circle at 50% 50%, #fffdf0, #ffe9a8 55%, #ffd268);
+    box-shadow: 0 0 90px 34px rgba(255, 216, 110, 0.5);
+    animation: sunGlow 6s ease-in-out infinite;
+}
+
+[data-theme="day"] .clouds {
+    background-image:
+        radial-gradient(180px 46px at 8% 34%, rgba(255, 255, 255, 0.78), transparent 72%),
+        radial-gradient(150px 40px at 22% 46%, rgba(255, 255, 255, 0.70), transparent 72%),
+        radial-gradient(200px 52px at 38% 28%, rgba(255, 255, 255, 0.74), transparent 72%),
+        radial-gradient(180px 46px at 58% 34%, rgba(255, 255, 255, 0.78), transparent 72%),
+        radial-gradient(150px 40px at 72% 46%, rgba(255, 255, 255, 0.70), transparent 72%),
+        radial-gradient(200px 52px at 88% 28%, rgba(255, 255, 255, 0.74), transparent 72%);
+}
+
+[data-theme="day"] .mtn-3 {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%236fb890'%20d='M0,320L0,200L240,140L480,195L720,120L960,185L1200,130L1440,175L1440,320Z'/%3E%3C/svg%3E");
+    opacity: 1;
+}
+[data-theme="day"] .mtn-2 {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%23409a5f'%20d='M0,320L0,235L180,165L360,225L540,150L720,215L900,158L1080,220L1260,160L1440,210L1440,320Z'/%3E%3C/svg%3E");
+}
+[data-theme="day"] .mtn-1 {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%23237442'%20d='M0,320L0,265L140,185L300,255L460,150L640,248L820,175L1000,255L1180,188L1360,250L1440,205L1440,320Z'/%3E%3C/svg%3E");
+}
+[data-theme="day"] .fog {
+    background: linear-gradient(to bottom, transparent, rgba(238, 242, 248, 0.6) 55%, var(--bg) 100%);
+}
+
+/* Light-mode readability tweaks */
+[data-theme="day"] .btn-grad { color: #ffffff; }
+[data-theme="day"] .filter-chip.active { color: #ffffff; }
+[data-theme="day"] .project-card:hover { box-shadow: 0 20px 40px rgba(27, 36, 48, 0.18); }
+
+[data-theme="day"] .tag-fullstack { color: #1a7f37; background: rgba(26, 127, 55, 0.12);  border-color: rgba(26, 127, 55, 0.4); }
+[data-theme="day"] .tag-frontend  { color: #0969da; background: rgba(9, 105, 218, 0.10);  border-color: rgba(9, 105, 218, 0.4); }
+[data-theme="day"] .tag-game      { color: #8250df; background: rgba(130, 80, 223, 0.10); border-color: rgba(130, 80, 223, 0.4); }
+[data-theme="day"] .tag-ml        { color: #bc4c00; background: rgba(188, 76, 0, 0.10);   border-color: rgba(188, 76, 0, 0.4); }
+[data-theme="day"] .tag-tool      { color: #9a6700; background: rgba(154, 103, 0, 0.10);  border-color: rgba(154, 103, 0, 0.4); }

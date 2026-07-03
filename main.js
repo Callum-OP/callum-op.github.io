@@ -14,11 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFilter();
 });
 
-/* ---------- Theme (night / sunset) ---------- */
+/* ---------- Theme (sunset / night / day) ---------- */
+var THEME_ORDER = ['sunset', 'night', 'day'];
+var THEME_META = {
+    sunset: { icon: 'fa-cloud-sun', label: 'Sunset' },
+    night:  { icon: 'fa-moon',      label: 'Night' },
+    day:    { icon: 'fa-sun',       label: 'Day' }
+};
+
 function applySavedTheme() {
-    if (localStorage.getItem('theme') === 'sunset') {
-        document.documentElement.setAttribute('data-theme', 'sunset');
-    }
+    var saved = localStorage.getItem('theme');
+    var theme = THEME_ORDER.indexOf(saved) !== -1 ? saved : 'sunset';
+    document.documentElement.setAttribute('data-theme', theme);
 }
 
 function setupThemeToggle() {
@@ -26,21 +33,21 @@ function setupThemeToggle() {
     if (!btn) return;
 
     const render = () => {
-        const sunset = document.documentElement.getAttribute('data-theme') === 'sunset';
-        btn.innerHTML = sunset ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        btn.setAttribute('aria-label', sunset ? 'Switch to night theme' : 'Switch to sunset theme');
+        const current = document.documentElement.getAttribute('data-theme') || 'sunset';
+        const meta = THEME_META[current] || THEME_META.sunset;
+        const nextIdx = (THEME_ORDER.indexOf(current) + 1) % THEME_ORDER.length;
+        const next = THEME_META[THEME_ORDER[nextIdx]];
+        btn.innerHTML = '<i class="fas ' + meta.icon + '"></i>';
+        btn.setAttribute('aria-label', meta.label + ' theme — click to switch to ' + next.label);
+        btn.setAttribute('title', meta.label + ' theme');
     };
 
     render();
     btn.addEventListener('click', () => {
-        const sunset = document.documentElement.getAttribute('data-theme') === 'sunset';
-        if (sunset) {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'night');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'sunset');
-            localStorage.setItem('theme', 'sunset');
-        }
+        const current = document.documentElement.getAttribute('data-theme') || 'sunset';
+        const next = THEME_ORDER[(THEME_ORDER.indexOf(current) + 1) % THEME_ORDER.length];
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
         render();
     });
 }
