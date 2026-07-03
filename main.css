@@ -143,6 +143,32 @@ video {
 /* Don't underline the social links */
 .nav-social a::after { display: none; }
 
+/* Desktop: the three page links become a grouped set of pill buttons,
+   clearly separated from the social links and theme toggle. */
+@media (min-width: 861px) {
+    .nav-menu > .nav-links:not(.nav-social) { gap: 0.5rem; }
+
+    .nav-links:not(.nav-social) a {
+        padding: 0.4rem 0.95rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+    }
+    .nav-links:not(.nav-social) a::after { display: none; }
+    .nav-links:not(.nav-social) a:hover,
+    .nav-links:not(.nav-social) a.active {
+        border-color: var(--accent);
+    }
+    .nav-links:not(.nav-social) a.active {
+        background: color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+
+    /* Divider + breathing room before the social links */
+    .nav-social {
+        border-left: 1px solid var(--border);
+        padding-left: 1.5rem;
+    }
+}
+
 /* Hamburger button (hidden on desktop) */
 .nav-toggle {
     display: none;
@@ -220,6 +246,9 @@ video {
         border-top: 1px solid var(--border);
         font-size: 1rem;
     }
+
+    /* Extra gap so the social links read as a separate group */
+    .nav-social { margin-top: 0.6rem; }
 }
 
 /* ---------- Shared helpers ---------- */
@@ -285,7 +314,7 @@ video {
     --muted: #5b6675;
     --accent: #2831d9;
     --accent3: #2b2ec7;
-    --grad: linear-gradient(120deg, #4338ca 0%, #3530d4 50%, #3a4ced 100%);
+    --grad: linear-gradient(120deg, #4338ca 0%, #3038d4 50%, #3a4ced 100%);
 }
 
 /* Light-mode navbar */

@@ -609,7 +609,7 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
     --accent1: #4f46e5;
     --accent2: #6a30d4;
     --accent3: #5b2bc7;
-    --grad: linear-gradient(120deg, #4338ca 0%, #6a30d4 50%, #7c3aed 100%);
+    --grad: linear-gradient(120deg, #383dca 0%, #3530d4 50%, #4c3aed 100%);
 }
 
 /* Bright daytime sky */
@@ -619,7 +619,7 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 
 /* Blue-violet title gradient that reads on the light sky */
 [data-theme="day"] .hero-title {
-    background-image: linear-gradient(120deg, #4338ca 0%, #4b30d4 50%, #673aed 100%);
+    background-image: linear-gradient(120deg, #3844ca 0%, #3038d4 50%, #3a49ed 100%);
     color: #241a4d;
 }
 
