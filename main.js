@@ -3,6 +3,7 @@
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    applySavedTheme();
     loadNavbar();
     setupScrollProgress();
     setupReveal();
@@ -12,6 +13,37 @@ document.addEventListener('DOMContentLoaded', () => {
     setupHeroGlow();
     setupFilter();
 });
+
+/* ---------- Theme (night / sunset) ---------- */
+function applySavedTheme() {
+    if (localStorage.getItem('theme') === 'sunset') {
+        document.documentElement.setAttribute('data-theme', 'sunset');
+    }
+}
+
+function setupThemeToggle() {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+
+    const render = () => {
+        const sunset = document.documentElement.getAttribute('data-theme') === 'sunset';
+        btn.innerHTML = sunset ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        btn.setAttribute('aria-label', sunset ? 'Switch to night theme' : 'Switch to sunset theme');
+    };
+
+    render();
+    btn.addEventListener('click', () => {
+        const sunset = document.documentElement.getAttribute('data-theme') === 'sunset';
+        if (sunset) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'night');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'sunset');
+            localStorage.setItem('theme', 'sunset');
+        }
+        render();
+    });
+}
 
 /* ---------- Navbar (injected on every page) ---------- */
 function loadNavbar() {
@@ -33,6 +65,9 @@ function loadNavbar() {
                     toggle.setAttribute('aria-expanded', isOpen);
                 });
             }
+
+            // Day / sunset theme toggle (lives in the injected navbar)
+            setupThemeToggle();
 
             // Highlight the link for the current page
             let path = window.location.pathname.replace(/\/$/, '');
