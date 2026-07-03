@@ -1,13 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --bg: #0d1117;
-    --bg-alt: #161b22;
-    --border: #21262d;
+    --bg: #0b0e14;
+    --bg-alt: #10141d;
+    --border: #232c3b;
     --text: #e6edf3;
-    --muted: #8b949e;
-    --accent: #58a6ff;
+    --muted: #93a1b5;
+    --accent: #62c2ea;
+    --accent3: #7ce8fb;
+    --grad: linear-gradient(120deg, #7ccfdd 0%, #8ec2f2 50%, #b3d2ff 100%);
     --nav-h: 60px;
+}
+
+/* Scroll progress bar (all pages) */
+.scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px; width: 0;
+    background: var(--grad);
+    z-index: 2000;
+    box-shadow: 0 0 12px rgba(29, 78, 216, 0.6);
+    transition: width 0.05s linear;
+}
+
+/* Scroll reveal base (activated by JS) */
+body.reveal-ready .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    body.reveal-ready .reveal { opacity: 1; transform: none; transition: none; }
 }
 
 /* Offset fixed navbar so page content is never hidden underneath it */
@@ -50,16 +75,21 @@ video {
 }
 
 .nav-brand {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.15rem;
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
     text-decoration: none;
     white-space: nowrap;
+    background: var(--grad);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s ease;
 }
 
 .nav-brand:hover {
-    color: var(--accent);
+    background-position: right center;
     text-decoration: none;
 }
 
@@ -79,6 +109,7 @@ video {
 }
 
 .nav-links a {
+    position: relative;
     color: #c9d1d9;
     font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
@@ -88,11 +119,29 @@ video {
     transition: color 0.2s ease;
 }
 
+/* Animated gradient underline */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 100%; height: 2px;
+    border-radius: 2px;
+    background: var(--grad);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--accent);
+    color: #ffffff;
     text-decoration: none;
 }
+.nav-links a:hover::after,
+.nav-links a.active::after { transform: scaleX(1); }
+
+/* Don't underline the social links */
+.nav-social a::after { display: none; }
 
 /* Hamburger button (hidden on desktop) */
 .nav-toggle {

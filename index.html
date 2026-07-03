@@ -18,14 +18,46 @@
 
     <!-- Hero Section -->
     <section class="hero">
-    <h1>Hi, I'm Callum O'Prey</h1>
-    <p>Computer Science Graduate | Independent Developer</p>
-    <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+        <div class="hero-scene" aria-hidden="true">
+            <div class="stars"></div>
+            <div class="moon"></div>
+            <div class="clouds"></div>
+            <div class="mtn mtn-3"></div>
+            <div class="mtn mtn-2"></div>
+            <div class="mtn mtn-1"></div>
+            <div class="fog"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Hi, I'm</p>
+            <h1 class="hero-title">Callum O'Prey</h1>
+            <p class="hero-subtitle">I make <span class="rotator" data-words='["web apps","games","ML models","developer tools","3D tools"]'>web apps</span></p>
+            <p class="hero-tagline">First-Class Computer Science graduate &amp; independent developer, crafting web apps, tools, games and machine learning projects.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-grad">View My Work</a>
+                <a href="/about.html" class="btn-ghost">About Me</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Callum-OP" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/callum-o-prey/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:callumoprey@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <a href="#projects" class="scroll-cue">Scroll<i class="fas fa-chevron-down"></i></a>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="container py-5">
-    <h2 class="text-center mb-5">My Projects</h2>
+    <h2 class="projects-title mb-3">My <span>Projects</span></h2>
+
+    <!-- Filter -->
+    <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="fullstack">Full Stack</button>
+        <button class="filter-chip" data-filter="frontend">Frontend</button>
+        <button class="filter-chip" data-filter="game">Game</button>
+        <button class="filter-chip" data-filter="ml">ML / AI</button>
+        <button class="filter-chip" data-filter="tool">Tool</button>
+    </div>
 
     <!-- Featured Highlights -->
     <div class="project-group">
