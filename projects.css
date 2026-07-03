@@ -669,3 +669,8 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 [data-theme="day"] .tag-game      { color: #8250df; background: rgba(130, 80, 223, 0.10); border-color: rgba(130, 80, 223, 0.4); }
 [data-theme="day"] .tag-ml        { color: #bc4c00; background: rgba(188, 76, 0, 0.10);   border-color: rgba(188, 76, 0, 0.4); }
 [data-theme="day"] .tag-tool      { color: #9a6700; background: rgba(154, 103, 0, 0.10);  border-color: rgba(154, 103, 0, 0.4); }
+
+/* On smaller screens the sun/moon sits behind the hero title, so hide it */
+@media (max-width: 1200px), (max-height: 800px) {
+    .moon { display: none; }
+}
