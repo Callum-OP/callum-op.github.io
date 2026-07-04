@@ -599,29 +599,33 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
    Day theme (light)
    ========================================================= */
 [data-theme="day"] {
-    --bg: #eef2f8;
+    --bg: #eef8f0;
     --bg-soft: #e4eaf3;
     --panel: #ffffff;
     --panel-2: #f1f5fa;
     --border: #d6deea;
     --text: #1b2430;
     --muted: #5b6675;
-    --accent1: #4f46e5;
-    --accent2: #6a30d4;
-    --accent3: #5b2bc7;
+    --accent1: #0b606b;
+    --accent2: #0b686b;
+    --accent3: #0b656b;
     --grad: linear-gradient(120deg, #383dca 0%, #3530d4 50%, #4c3aed 100%);
 }
 
-/* Bright daytime sky */
+/* Bright daytime sky fading to a soft green horizon */
 [data-theme="day"] .hero {
-    background: linear-gradient(to bottom, #4a90e2 0%, #74b0ec 40%, #a3ccef 72%, #c4dcef 100%);
+    background: linear-gradient(to bottom, #2b7fdb 0%, #4f9be7 38%, #8ec6ec 66%, #b9dcc4 100%);
 }
 
-/* Blue-violet title gradient that reads on the light sky */
+/* Blue-to-teal-green title gradient that bridges the sky and hills */
 [data-theme="day"] .hero-title {
-    background-image: linear-gradient(120deg, #3844ca 0%, #3038d4 50%, #3a49ed 100%);
-    color: #241a4d;
+    background-image: linear-gradient(120deg, #0e4c88 0%, #0d5f7c 50%, #0b6b52 100%);
+    color: #0d4a63;
 }
+/* Deep, legible support text on the bright sky */
+[data-theme="day"] .hero-eyebrow { color: #0e5f7c; }
+[data-theme="day"] .hero-subtitle { color: #123a52; }
+[data-theme="day"] .hero-tagline { color: #1b4152; }
 
 /* Daytime: no stars, bright sun, white clouds, green hills */
 [data-theme="day"] .stars { display: none; }
@@ -629,10 +633,14 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 
 [data-theme="day"] .moon {
     top: 16%; right: 18%;
-    width: 104px; height: 104px;
-    background: radial-gradient(circle at 50% 50%, #fffdf0, #ffe9a8 55%, #ffd268);
-    box-shadow: 0 0 90px 34px rgba(255, 216, 110, 0.5);
-    animation: sunGlow 6s ease-in-out infinite;
+    width: 110px; height: 110px;
+    background: radial-gradient(circle at 50% 50%, #ffffff, #fff3ad 48%, #ffd94e);
+    box-shadow: 0 0 120px 46px rgba(255, 221, 110, 0.7);
+    animation: dayGlow 6s ease-in-out infinite;
+}
+@keyframes dayGlow {
+    0%, 100% { box-shadow: 0 0 110px 42px rgba(255, 221, 110, 0.6); }
+    50% { box-shadow: 0 0 150px 58px rgba(255, 236, 150, 0.85); }
 }
 
 [data-theme="day"] .clouds {
@@ -646,17 +654,18 @@ body.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 }
 
 [data-theme="day"] .mtn-3 {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%236fb890'%20d='M0,320L0,200L240,140L480,195L720,120L960,185L1200,130L1440,175L1440,320Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%2352c079'%20d='M0,320L0,200L240,140L480,195L720,120L960,185L1200,130L1440,175L1440,320Z'/%3E%3C/svg%3E");
     opacity: 1;
 }
 [data-theme="day"] .mtn-2 {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%23409a5f'%20d='M0,320L0,235L180,165L360,225L540,150L720,215L900,158L1080,220L1260,160L1440,210L1440,320Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%231fa04c'%20d='M0,320L0,235L180,165L360,225L540,150L720,215L900,158L1080,220L1260,160L1440,210L1440,320Z'/%3E%3C/svg%3E");
 }
 [data-theme="day"] .mtn-1 {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%23237442'%20d='M0,320L0,265L140,185L300,255L460,150L640,248L820,175L1000,255L1180,188L1360,250L1440,205L1440,320Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20320'%20preserveAspectRatio='none'%3E%3Cpath%20fill='%230f7d31'%20d='M0,320L0,265L140,185L300,255L460,150L640,248L820,175L1000,255L1180,188L1360,250L1440,205L1440,320Z'/%3E%3C/svg%3E");
 }
+/* Green ground beneath the hills instead of a washed-out grey fade */
 [data-theme="day"] .fog {
-    background: linear-gradient(to bottom, transparent, rgba(238, 242, 248, 0.6) 55%, var(--bg) 100%);
+    background: linear-gradient(to bottom, transparent, rgba(15, 125, 49, 0.25) 45%, #0f7d31 100%);
 }
 
 /* Light-mode readability tweaks */
