@@ -22,7 +22,13 @@
         <p class="center">GitHub Repo: <a href="https://github.com/Callum-OP/3D-Character-Animator">https://github.com/Callum-OP/3D-Character-Animator</a><br>
         View GitHub Pages website: <a href="https://callum-op.github.io/3D-Character-Animator/">https://callum-op.github.io/3D-Character-Animator/</a><br>
         Play on <a href="https://callum-op.itch.io/3d-animator">Itch.io</a></p>
-        <a href="/images/3d-animator/Home.png"><img class="img rounded img-fluid" src="/images/3d-animator/Home.png" alt="Screenshot of the 3D Character Animator home screen"/></a><br><br>
+        <div class="center">
+            <video width="640" height="360" controls>
+                <source src="/images/3d-animator/demo.mp4" type="video/mp4">
+                Your browser does not support video tags.
+            </video><br>
+            <a href="/images/3d-animator/demo.mp4">Go full screen</a><br><br>
+        </div><br><br>
         <p><i class="devicon-threejs-original colored"></i> Three.js,
             <i class="devicon-react-original colored"></i> React,
             <i class="devicon-vitejs-plain colored"></i> Vite,
@@ -30,26 +36,32 @@
             <i class="devicon-html5-plain colored"></i> HTML,
             <i class="devicon-css3-plain colored"></i> CSS
         </p>
-        <p>A lightweight, browser-based tool for posing, animating and rasterising 3D characters exported from Blender. It runs entirely client-side, so models are loaded locally and never uploaded to a server.
+        <p>A lightweight, browser-based tool for posing and animating 3D characters exported from Blender. It runs entirely client-side, so models are loaded locally and never uploaded to a server.
         </p>
-        <p>Characters and scene elements can be arranged into shots with custom lighting, cameras and animation clips, without the memory overhead of a full 3D package.
+        <p>Characters and scene elements can be arranged into shots with custom lighting, cameras and animation clips, without the memory overhead of a full 3D package such as Blender.
         </p>
 
             Features:
             <ul>
                 <li>Load rigged <code>.glb</code>, <code>.gltf</code> and <code>.fbx</code> characters.</li>
-                <li>Pose bones and edit individual mesh parts with transform gizmos.</li>
+                <li>Pose bones and edit individual mesh parts with UI transform gizmos.</li>
+                <li>Change shape keys for facial expressions or other deformations during animation.</li>
                 <li>Play baked animations or create custom keyframe animations.</li>
                 <li>Import <code>.bvh</code> motion capture files and retarget them to a character rig.</li>
-                <li>Add props, backgrounds and multiple cameras with keyframes and cuts.</li>
-                <li>Choose unlit, toon or standard shading with configurable lighting and outlines.</li>
+                <li>Add props, backgrounds, lights and multiple cameras with keyframes and cuts.</li>
+                <li>Choose several shading styles including cell, toon, anime and realistic options with configurable settings.</li>
                 <li>Export transparent PNGs, WebM videos and BVH animation files.</li>
             </ul>
         <br>
         <p>Screenshots of the app:</p>
         <div class="row">
-            <a class="col" href="/images/3d-animator/LoadedCharacter.png"><img class="img rounded img-fluid" src="/images/3d-animator/LoadedCharacter.png" alt="Screenshot of a loaded 3D character"/></a><br>
-            <a class="col" href="/images/3d-animator/Expressions.png"><img class="img rounded img-fluid" src="/images/3d-animator/Expressions.png" alt="Screenshot of 3D character expression editing"/></a><br><br>
+            <a class="col" href="/images/3d-animator/Home.png"><img class="img rounded img-fluid" src="/images/3d-animator/Home.png" alt="Screenshot of the 3D Character Animator home screen"/></a><br>
+            <a class="col" href="/images/3d-animator/LoadedCharacter.png"><img class="img rounded img-fluid" src="/images/3d-animator/LoadedCharacter.png" alt="Screenshot of a loaded 3D character"/></a><br><br>
+        </div>
+        <br>
+        <div class="row">
+            <a class="col" href="/images/3d-animator/Expressions.png"><img class="img rounded img-fluid" src="/images/3d-animator/Expressions.png" alt="Screenshot of 3D character expression editing"/></a><br>
+            <a class="col" href="/images/3d-animator/MinecraftScene.png"><img class="img rounded img-fluid" src="/images/3d-animator/MinecraftScene.png" alt="Screenshot of a Minecraft-themed animated scene"/></a><br><br>
         </div>
         <br>
     </div>
